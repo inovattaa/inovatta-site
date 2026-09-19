@@ -41,7 +41,7 @@
     .nav{
       height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px
     }
-    .brand img{width:156px;height:auto}
+    .brand{display:flex;align-items:center}.brand img{width:150px;height:42px;object-fit:contain}
     .navlinks{display:flex;align-items:center;gap:28px;font-weight:700;font-size:14px;color:#38505f}
     .navlinks a{position:relative}
     .navlinks a:after{
@@ -180,7 +180,7 @@
     .contact-side .wa{margin-top:10px;display:inline-flex;width:max-content;padding:13px 18px;border-radius:13px;background:#fff;color:var(--navy);font-size:14px}
     footer{padding:26px 0;border-top:1px solid var(--line);background:#fff}
     .footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#6b7c87;font-size:12px}
-    .footer-row img{width:112px}
+    .footer-row img{width:118px;height:34px;object-fit:contain}
 
     .whatsapp{
       position:fixed;right:18px;bottom:18px;z-index:45;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#18b66a;color:#fff;font-weight:900;box-shadow:0 12px 32px rgba(0,0,0,.17)
@@ -188,7 +188,7 @@
     @media(max-width:900px){
       .container{width:min(100% - 28px,760px)}
       .nav{height:70px}
-      .brand img{width:122px}
+      .brand img{width:124px;height:36px}
       .navlinks{display:none}
       .system-btn{font-size:12px;padding:9px 12px}
       .menu{display:block}
@@ -224,7 +224,7 @@
     }
     @media(max-width:560px){
       .container{width:calc(100% - 24px)}
-      .brand img{width:108px}
+      .brand img{width:112px;height:32px}
       .system-btn{padding:8px 10px;border-radius:10px}
       h1{font-size:48px}
       .hero{background:linear-gradient(180deg,#fbfdfe 0%,#f6fafc 100%)}
