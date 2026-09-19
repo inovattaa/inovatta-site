@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071C2A" />
+  <meta name="description" content="Inovatta Soluções Contábeis — contabilidade moderna, próxima e organizada para empresas que querem crescer." />
+  <title>Inovatta Soluções Contábeis</title>
+  <link rel="canonical" href="https://inovattasolucoescontabeis.com.br/" />
+  <style>
+    :root{
+      --ink:#071C2A;
+      --ink-2:#0B2A40;
+      --blue:#0A78D1;
+      --blue-2:#16A8F5;
+      --cyan:#BDEBFF;
+      --paper:#F5F9FC;
+      --paper-2:#ECF5FA;
+      --white:#FFFFFF;
+      --muted:#5D7280;
+      --line:#DDEAF2;
+      --green:#19B46B;
+      --shadow:0 24px 70px rgba(12,47,72,.12);
+      --soft-shadow:0 14px 36px rgba(12,47,72,.09);
+      --radius:28px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max),calc(100% - 44px));margin:auto}
+
+    /* header */
+    .site-header{
+      position:sticky;top:0;z-index:60;
+      background:rgba(247,251,253,.82);
+      backdrop-filter:blur(18px) saturate(140%);
+      border-bottom:1px solid rgba(215,232,242,.72);
+    }
+    .header-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand img{width:162px;height:auto;object-fit:contain}
+    .nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:750;color:#29485C}
+    .nav a{position:relative;padding:10px 0}
+    .nav a::after{content:"";position:absolute;left:0;bottom:4px;width:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--blue-2));transition:.25s}
+    .nav a:hover::after{width:100%}
+    .header-actions{display:flex;gap:10px;align-items:center}
+    .btn{border:0;border-radius:15px;min-height:46px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:14px;cursor:pointer;transition:.22s ease}
+    .btn-primary{color:white;background:linear-gradient(135deg,#075E9F,#0797E8);box-shadow:0 12px 28px rgba(7,116,184,.24)}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(7,116,184,.32)}
+    .btn-ghost{background:rgba(255,255,255,.74);color:var(--ink-2);border:1px solid #CCE1ED}
+    .btn-ghost:hover{background:#fff}
+    .menu-btn{display:none;width:44px;height:44px;border:1px solid #D7E6EF;border-radius:14px;background:#fff;color:var(--ink);font-size:22px}
+
+    /* hero */
+    .hero{position:relative;isolation:isolate;padding:72px 0 76px;background:
+      radial-gradient(circle at 88% 8%,rgba(36,169,244,.20),transparent 28%),
+      radial-gradient(circle at 10% 78%,rgba(84,198,255,.12),transparent 24%),
+      linear-gradient(180deg,#FFFFFF 0%,#F4FAFD 100%);
+      border-bottom:1px solid var(--line)
+    }
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(10,120,209,.14) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(to bottom,black,transparent 72%);opacity:.45}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:64px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#E6F6FF;color:#0868AA;border:1px solid #C8EAFE;font-size:12px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--blue-2);box-shadow:0 0 0 6px rgba(22,168,245,.11)}
+    h1{font-size:clamp(48px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:24px 0 22px;max-width:740px}
+    .grad{background:linear-gradient(100deg,#0876C5,#18A8F4);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{max-width:620px;color:var(--muted);font-size:18px;line-height:1.72;margin:0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:26px;color:#3A596C;font-size:13px;font-weight:750}
+    .trust{display:flex;align-items:center;gap:8px}.trust svg{width:18px;height:18px;stroke:#0C8BDB}
+
+    .visual{position:relative;min-height:510px}
+    .glow{position:absolute;inset:65px 28px 20px;border-radius:48px;background:linear-gradient(145deg,#0B2E45,#0A6EA9 62%,#17A7EF);box-shadow:0 36px 90px rgba(5,76,117,.28)}
+    .glow::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 74% 18%,rgba(255,255,255,.22),transparent 28%),linear-gradient(110deg,transparent 45%,rgba(255,255,255,.06));}
+    .phone-shell{position:absolute;left:10px;top:18px;width:188px;height:382px;border-radius:34px;background:linear-gradient(150deg,#fff,#E8F2F7);box-shadow:0 25px 60px rgba(5,44,70,.28);padding:10px;border:1px solid rgba(255,255,255,.9);transform:rotate(-3deg)}
+    .phone-screen{height:100%;border-radius:25px;background:linear-gradient(180deg,#F9FCFE,#EAF6FB);overflow:hidden;padding:16px 13px}
+    .mini-logo{width:92px;margin:3px auto 16px}
+    .mini-title{font-size:13px;font-weight:900;text-align:center;margin-bottom:14px}
+    .mini-card{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 8px 20px rgba(9,64,99,.08)}
+    .mini-bars{height:62px;display:flex;align-items:flex-end;gap:6px}.mini-bars span{flex:1;background:linear-gradient(#18A9F4,#0A73C3);border-radius:8px 8px 3px 3px}.mini-bars span:nth-child(1){height:24%}.mini-bars span:nth-child(2){height:40%}.mini-bars span:nth-child(3){height:54%}.mini-bars span:nth-child(4){height:72%}.mini-bars span:nth-child(5){height:86%}
+    .dash-card{position:absolute;right:5px;top:136px;width:375px;background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.88);border-radius:26px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(16px)}
+    .dash-kicker{font-size:11px;font-weight:900;color:#6E8492;text-transform:uppercase;letter-spacing:.08em}
+    .dash-title{font-size:24px;line-height:1.15;font-weight:900;letter-spacing:-.025em;margin:7px 0 18px}
+    .chart{height:95px;display:flex;align-items:flex-end;gap:10px;padding:10px 0 2px}.chart span{width:25px;background:linear-gradient(180deg,#35B9F9,#0877C9);border-radius:9px 9px 4px 4px;box-shadow:0 6px 12px rgba(11,137,213,.14)}.chart span:nth-child(1){height:25%}.chart span:nth-child(2){height:38%}.chart span:nth-child(3){height:48%}.chart span:nth-child(4){height:63%}.chart span:nth-child(5){height:78%}.chart span:nth-child(6){height:91%}
+    .float-card{position:absolute;border-radius:18px;background:rgba(255,255,255,.93);border:1px solid rgba(220,238,247,.9);box-shadow:var(--soft-shadow);padding:15px 17px;backdrop-filter:blur(14px)}
+    .float-card strong{display:block;font-size:14px;margin-bottom:2px}.float-card span{font-size:12px;color:var(--muted)}
+    .fc1{right:18px;top:48px}.fc2{right:-18px;bottom:35px}.fc3{left:147px;bottom:0}
+    .live{position:absolute;right:46px;top:92px;color:#fff;border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.12);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}.live::before{content:"";display:inline-block;width:7px;height:7px;background:#63F0B3;border-radius:50%;margin-right:6px;box-shadow:0 0 0 5px rgba(99,240,179,.12)}
+
+    /* logos/metrics strip */
+    .quick{padding:22px 0;background:#fff;border-bottom:1px solid var(--line)}
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+    .quick-item{background:#fff;padding:18px 20px;display:flex;gap:12px;align-items:center}
+    .quick-icon{width:42px;height:42px;border-radius:13px;background:#EAF7FE;display:grid;place-items:center;color:#0A84D5;font-weight:900}
+    .quick-item b{display:block;font-size:14px}.quick-item small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+
+    section{padding:92px 0}
+    .section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:38px}
+    .section-head small{display:block;color:#0A7FCC;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+    h2{font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.04em;margin:0;max-width:760px}
+    .section-note{max-width:410px;color:var(--muted);line-height:1.7;font-size:15px}
+
+    /* services */
+    .services{background:#F6FAFD}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{position:relative;background:#fff;border:1px solid #E0EDF4;border-radius:24px;padding:25px;min-height:210px;box-shadow:0 10px 30px rgba(18,72,104,.055);overflow:hidden;transition:.25s}
+    .service-card::after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-58px;top:-58px;background:radial-gradient(circle,#DDF4FF,transparent 67%);opacity:.9}
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(18,72,104,.11)}
+    .icon-box{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#E9F8FF,#DDF2FD);color:#087CCB;margin-bottom:27px}.icon-box svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8}
+    .service-card h3{font-size:20px;margin:0 0 8px;letter-spacing:-.02em}.service-card p{margin:0;color:var(--muted);line-height:1.62;font-size:14px}
+
+    /* about */
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:stretch}
+    .about-copy{padding:14px 0}.about-copy p{font-size:17px;color:var(--muted);line-height:1.82;margin:20px 0}.about-copy .quote{font-size:27px;font-weight:900;line-height:1.2;letter-spacing:-.025em;color:var(--ink);margin:34px 0 0;padding-left:22px;border-left:4px solid #19A7F3}
+    .about-card{position:relative;border-radius:34px;background:linear-gradient(145deg,#071F30,#0B567F 72%,#0C8ACA);min-height:470px;overflow:hidden;padding:34px;color:#fff;box-shadow:var(--shadow)}
+    .about-card::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 25% 30%,rgba(70,202,255,.45),transparent 26%),radial-gradient(circle at 72% 75%,rgba(255,255,255,.16),transparent 23%);transform:rotate(-8deg)}
+    .about-card>*{position:relative}
+    .about-card img{width:155px;background:#fff;padding:8px 10px;border-radius:14px}
+    .about-card h3{font-size:36px;line-height:1.05;letter-spacing:-.04em;margin:80px 0 14px;max-width:360px}.about-card p{color:rgba(255,255,255,.8);line-height:1.7;max-width:360px;margin:0}
+    .about-tag{position:absolute;right:24px;bottom:24px;border-radius:18px;padding:16px 18px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);font-weight:800;font-size:13px}
+
+    /* reasons */
+    .reasons{background:linear-gradient(180deg,#F2F9FD,#EBF6FB)}
+    .reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .reason{background:rgba(255,255,255,.84);border:1px solid #D9EBF4;border-radius:22px;padding:22px;min-height:174px}.reason b{display:block;font-size:17px;margin:20px 0 8px}.reason p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .reason .n{width:38px;height:38px;border-radius:12px;background:#0B86D5;color:#fff;display:grid;place-items:center;font-weight:900}
+
+    /* process */
+    .process{background:#071C2A;color:#fff;position:relative;overflow:hidden}.process::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(17,164,239,.24),transparent 66%);right:-180px;top:-220px}.process .section-head small{color:#58C8FF}.process .section-note{color:rgba(255,255,255,.62)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);border-radius:22px;padding:23px;backdrop-filter:blur(8px)}.step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#0B8EDF;font-weight:900}.step h3{font-size:17px;margin:22px 0 8px}.step p{margin:0;color:rgba(255,255,255,.65);font-size:13px;line-height:1.6}
+
+    /* CTA */
+    .cta{padding:82px 0;background:#fff}
+    .cta-box{position:relative;overflow:hidden;border-radius:34px;background:linear-gradient(120deg,#07273B,#084E73 62%,#0A89CD);padding:46px;color:#fff;display:flex;justify-content:space-between;gap:34px;align-items:center;box-shadow:0 30px 70px rgba(4,57,88,.2)}
+    .cta-box::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-80px;top:-200px;background:rgba(110,215,255,.13)}
+    .cta-box>*{position:relative}.cta-box h2{max-width:660px;color:#fff}.cta-box p{color:rgba(255,255,255,.72);margin:14px 0 0;line-height:1.65}.cta-buttons{display:flex;gap:10px;flex-shrink:0}.cta .btn-ghost{background:#fff;border-color:#fff}
+
+    /* contact/footer */
+    .contact{background:#F5FAFD;padding-top:76px}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px}.contact-card{background:#fff;border:1px solid #DFEDF4;border-radius:26px;padding:28px;box-shadow:var(--soft-shadow)}.contact-card h3{margin:0 0 10px;font-size:22px}.contact-card p{color:var(--muted);line-height:1.7;margin:0 0 22px}.contact-line{padding:14px 0;border-top:1px solid #E3EEF4;display:flex;justify-content:space-between;gap:16px;font-size:14px}.contact-line span:first-child{color:var(--muted)}.contact-line span:last-child{font-weight:800;text-align:right}
+    .footer{padding:26px 0 110px;background:#F5FAFD;border-top:1px solid var(--line)}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;color:#738793;font-size:12px}.footer img{width:118px}
+
+    /* mobile nav */
+    .mobile-menu{display:none;position:fixed;inset:82px 14px auto 14px;z-index:80;background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border:1px solid #D8E8F1;border-radius:22px;padding:12px;box-shadow:var(--shadow)}
+    .mobile-menu.open{display:block}.mobile-menu a{display:flex;align-items:center;justify-content:space-between;padding:14px 12px;border-bottom:1px solid #E6EFF4;font-weight:800;font-size:14px}.mobile-menu a:last-child{border-bottom:0}
+    .bottom-nav{display:none}
+
+    @media(max-width:980px){
+      .nav,.header-actions{display:none}.menu-btn{display:grid;place-items:center}.header-inner{height:74px}.site-header .brand img{width:142px}
+      .hero{padding:52px 0 56px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:42px}.visual{min-height:480px;max-width:620px;margin:0 auto;width:100%}
+      .quick-grid{grid-template-columns:1fr 1fr}.service-grid{grid-template-columns:1fr 1fr}.reason-grid,.steps{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column;gap:14px}
+      .cta-box{align-items:flex-start;flex-direction:column}.cta-buttons{width:100%}.cta-buttons .btn{flex:1}
+    }
+    @media(max-width:640px){
+      .container{width:min(100% - 28px,560px)}
+      .site-header{background:rgba(250,253,255,.92)}
+      h1{font-size:44px;line-height:1.01;margin-top:18px}.hero-copy{font-size:16px;line-height:1.65}.hero-actions{display:grid;grid-template-columns:1fr 1fr}.hero-actions .btn{padding:0 12px;font-size:13px}.hero-trust{gap:9px 13px}
+      .visual{min-height:390px;margin-top:2px}.glow{inset:55px 0 12px;border-radius:32px}.phone-shell{width:145px;height:300px;left:0;top:20px;border-radius:27px}.phone-screen{border-radius:19px;padding:12px 10px}.mini-logo{width:72px}.dash-card{right:-3px;top:128px;width:265px;border-radius:20px;padding:18px}.dash-title{font-size:19px}.chart{height:72px;gap:7px}.chart span{width:18px}.fc1{right:2px;top:40px}.fc2{right:-4px;bottom:2px}.fc3{display:none}.live{right:22px;top:94px}
+      .quick{padding:14px 0}.quick-grid{grid-template-columns:1fr 1fr;border-radius:17px}.quick-item{padding:14px 12px;gap:9px}.quick-icon{width:36px;height:36px}.quick-item b{font-size:12px}.quick-item small{font-size:11px}
+      section{padding:66px 0}.section-head{margin-bottom:26px}.section-head small{margin-bottom:7px}h2{font-size:35px}.section-note{font-size:14px}.service-grid,.reason-grid,.steps{grid-template-columns:1fr}.service-card{min-height:0;padding:21px;border-radius:20px}.icon-box{margin-bottom:18px}.about-card{min-height:390px;padding:26px;border-radius:26px}.about-card h3{font-size:31px;margin-top:64px}.about-copy p{font-size:15px}.about-copy .quote{font-size:22px}.reason{min-height:0}.step{min-height:0}.cta{padding:58px 0}.cta-box{padding:28px 23px;border-radius:26px}.cta-buttons{display:grid;grid-template-columns:1fr}.contact-card{padding:22px;border-radius:22px}.contact-line{display:block}.contact-line span{display:block}.contact-line span:last-child{text-align:left;margin-top:3px}
+      .footer{padding-bottom:98px}.footer-inner{align-items:flex-start;flex-direction:column}.bottom-nav{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:90;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border:1px solid #D8E8F1;border-radius:20px;box-shadow:0 18px 50px rgba(5,51,79,.18);overflow:hidden}.bottom-nav a{padding:10px 5px 9px;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;font-weight:800;color:#436176}.bottom-nav svg{width:18px;height:18px;stroke:#0A7FCC;fill:none;stroke-width:1.8}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio"><img src="logo.png" alt="Inovatta Soluções Contábeis"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#solucoes">Soluções</a><a href="#quem-somos">Quem somos</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="https://wa.me/5594984472645?text=Olá%2C%20vim%20pelo%20site%20da%20Inovatta." target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-primary" href="https://sistema.inovattasolucoescontabeis.com.br/">Acessar sistema →</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#solucoes">Soluções <span>→</span></a><a href="#quem-somos">Quem somos <span>→</span></a><a href="#diferenciais">Diferenciais <span>→</span></a><a href="#contato">Contato <span>→</span></a><a href="https://sistema.inovattasolucoescontabeis.com.br/">Acessar sistema <span>↗</span></a>
+</div>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i></i> Gestão contábil sem complicação</span>
+        <h1>Contabilidade que <span class="grad">impulsiona seu negócio.</span></h1>
+        <p class="hero-copy">Tecnologia, organização e atendimento próximo para transformar rotinas contábeis em decisões mais claras, simples e seguras para sua empresa.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://sistema.inovattasolucoescontabeis.com.br/">🔒 Acessar sistema →</a>
+          <a class="btn btn-ghost" href="#quem-somos">Conhecer a Inovatta</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg> Seguro</span>
+          <span class="trust"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5-1.8A4.5 4.5 0 0 0 7 18z"/></svg> 100% em nuvem</span>
+          <span class="trust"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Atendimento próximo</span>
+        </div>
+      </div>
+      <div class="visual" aria-label="Visão ilustrativa da experiência Inovatta">
+        <div class="glow"></div>
+        <div class="phone-shell"><div class="phone-screen">
+          <img class="mini-logo" src="logo.png" alt="">
+          <div class="mini-title">Seu negócio em uma visão</div>
+          <div class="mini-card"><small style="font-weight:800;color:#587180">Organização</small><div class="mini-bars"><span></span><span></span><span></span><span></span><span></span></div></div>
+          <div class="mini-card"><small style="font-weight:800;color:#587180">Rotinas mais simples</small><div style="height:8px;border-radius:999px;background:#E7F1F6;margin-top:10px"><div style="width:72%;height:100%;border-radius:999px;background:#0B8DDC"></div></div></div>
+        </div></div>
+        <div class="live">ONLINE</div>
+        <div class="dash-card"><div class="dash-kicker">Visão do negócio</div><div class="dash-title">Informação clara.<br>Decisão melhor.</div><div class="chart"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <div class="float-card fc1"><strong>Gestão integrada</strong><span>menos ruído, mais controle</span></div>
+        <div class="float-card fc2"><strong>Feito para crescer</strong><span>contabilidade mais estratégica</span></div>
+        <div class="float-card fc3"><strong>Organização hoje</strong><span>crescimento sempre</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick"><div class="container quick-grid">
+    <div class="quick-item"><span class="quick-icon">◉</span><div><b>Clientes 360°</b><small>Visão completa</small></div></div>
+    <div class="quick-item"><span class="quick-icon">▣</span><div><b>Protocolos / OS</b><small>Controle e agilidade</small></div></div>
+    <div class="quick-item"><span class="quick-icon">$</span><div><b>Financeiro</b><small>Mais organização</small></div></div>
+    <div class="quick-item"><span class="quick-icon">↗</span><div><b>Relatórios</b><small>Decisões melhores</small></div></div>
+  </div></div>
+
+  <section class="services" id="solucoes">
+    <div class="container">
+      <div class="section-head"><div><small>Nossas soluções</small><h2>Tudo o que sua empresa precisa, em um só lugar.</h2></div><div class="section-note">Uma experiência organizada para acompanhar clientes, serviços, financeiro, equipe e documentos sem transformar a rotina em burocracia.</div></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 11a4 4 0 1 0 0-8"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><path d="M18 14a4 4 0 0 1 4 4v3"/></svg></div><h3>Clientes 360°</h3><p>Cadastro, histórico, documentos e visão completa de cada cliente em um único prontuário.</p></article>
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/><path d="M14 2v5h5"/><path d="M9 12h6M9 16h6"/></svg></div><h3>Protocolos / OS</h3><p>Controle de serviços, prazos, responsáveis, documentos e evolução do atendimento.</p></article>
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M16 8c-1-1-2-1-4-1s-3 1-3 2 1 2 3 2 3 1 3 2-1 3-3 3-3 0-4-1M12 5v14"/></svg></div><h3>Financeiro</h3><p>Recebimentos, cobranças, caixa e acompanhamento financeiro de forma clara e integrada.</p></article>
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6M7 16h4"/></svg></div><h3>Planos & Contratos</h3><p>Serviços sob medida, contratos organizados e acompanhamento recorrente por cliente.</p></article>
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M17 11l2 2 4-4"/></svg></div><h3>RH + DP</h3><p>Rotinas de pessoas, documentos, ponto e processos internos com visão mais simples.</p></article>
+        <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-8M22 19V3"/></svg></div><h3>Relatórios</h3><p>Informações organizadas para acompanhar a operação e tomar decisões com mais segurança.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="quem-somos">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span class="eyebrow"><i></i> Quem somos</span>
+        <h2 style="margin-top:20px">Contabilidade moderna sem perder o lado humano.</h2>
+        <p>A Inovatta Soluções Contábeis nasce com uma proposta simples: tornar a gestão contábil mais clara, organizada e próxima de quem empreende.</p>
+        <p>Unimos conhecimento, tecnologia e atendimento para transformar obrigações em rotina, dados em informação e informação em decisões melhores.</p>
+        <div class="quote">“Mais do que contabilidade, construímos uma operação que ajuda seu negócio a avançar.”</div>
+      </div>
+      <aside class="about-card">
+        <img src="logo.png" alt="Inovatta Soluções Contábeis">
+        <h3>Organização hoje.<br>Crescimento sempre.</h3>
+        <p>Uma experiência pensada para simplificar o dia a dia e manter tudo importante sob controle.</p>
+        <div class="about-tag">Clareza • Proximidade • Tecnologia</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="reasons" id="diferenciais">
+    <div class="container">
+      <div class="section-head"><div><small>Por que Inovatta</small><h2>Uma experiência que faz sentido no dia a dia.</h2></div><div class="section-note">Sem excesso de informação, sem menus confusos e sem distância entre você e o que realmente precisa acompanhar.</div></div>
+      <div class="reason-grid">
+        <div class="reason"><div class="n">01</div><b>100% em nuvem</b><p>Acesse de onde estiver, com uma experiência consistente no computador ou no celular.</p></div>
+        <div class="reason"><div class="n">02</div><b>Intuitivo</b><p>Fluxos mais naturais, informação bem apresentada e menos tempo procurando o que precisa.</p></div>
+        <div class="reason"><div class="n">03</div><b>Agilidade operacional</b><p>Processos mais claros para que a equipe trabalhe com organização e velocidade.</p></div>
+        <div class="reason"><div class="n">04</div><b>Visual profissional</b><p>Relatórios, documentos e informações apresentados com clareza e padrão profissional.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="section-head"><div><small>Experiência Inovatta</small><h2>Simples para usar. Completa para acompanhar.</h2></div><div class="section-note">Do primeiro atendimento à entrega, cada etapa pode ser organizada dentro da mesma experiência.</div></div>
+      <div class="steps">
+        <div class="step"><span>1</span><h3>Centralize</h3><p>Clientes, documentos e serviços ficam organizados em um único lugar.</p></div>
+        <div class="step"><span>2</span><h3>Acompanhe</h3><p>Prazos, status e responsáveis ficam visíveis para reduzir ruído e retrabalho.</p></div>
+        <div class="step"><span>3</span><h3>Controle</h3><p>Financeiro, caixa e cobranças trabalham conectados à operação.</p></div>
+        <div class="step"><span>4</span><h3>Decida</h3><p>Relatórios transformam o que acontece no dia a dia em informação útil.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container"><div class="cta-box">
+      <div><small style="font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#6FD4FF">Pronto para uma gestão mais inteligente?</small><h2 style="margin-top:10px">Acesse agora o sistema da Inovatta.</h2><p>Mais controle, mais clareza e uma rotina mais organizada para o seu negócio.</p></div>
+      <div class="cta-buttons"><a class="btn btn-ghost" href="https://wa.me/5594984472645?text=Olá%2C%20quero%20falar%20com%20a%20Inovatta." target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-primary" href="https://sistema.inovattasolucoescontabeis.com.br/">Acessar sistema →</a></div>
+    </div></div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container contact-grid">
+      <div><span class="eyebrow"><i></i> Fale com a Inovatta</span><h2 style="margin-top:20px">Atendimento próximo começa por aqui.</h2><p style="color:var(--muted);line-height:1.75;max-width:480px">Entre em contato pelo WhatsApp para conversar sobre sua empresa e entender como a Inovatta pode apoiar sua rotina contábil.</p></div>
+      <div class="contact-card"><h3>Contato</h3><p>Escolha o canal mais simples para você.</p><div class="contact-line"><span>WhatsApp</span><span>(94) 98447-2645</span></div><div class="contact-line"><span>Site</span><span>inovattasolucoescontabeis.com.br</span></div><div style="margin-top:20px"><a class="btn btn-primary" style="width:100%" href="https://wa.me/5594984472645?text=Olá%2C%20vim%20pelo%20site%20da%20Inovatta." target="_blank" rel="noopener">Conversar no WhatsApp →</a></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><img src="logo.png" alt="Inovatta"><span>© <span id="year"></span> Inovatta Soluções Contábeis. Todos os direitos reservados.</span><span>Contabilidade que impulsiona seu negócio.</span></div></footer>
+
+<nav class="bottom-nav" aria-label="Navegação móvel">
+  <a href="#inicio"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Início</a>
+  <a href="#solucoes"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Soluções</a>
+  <a href="#quem-somos"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Quem somos</a>
+  <a href="https://wa.me/5594984472645" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.3 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>WhatsApp</a>
+</nav>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+  mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+</script>
+</body>
+</html>
